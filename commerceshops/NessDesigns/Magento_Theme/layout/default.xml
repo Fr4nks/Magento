@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ 
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+
+<!--HEADER EDIT>-->
+    <move element="minicart" destination="header-wrapper" after="block-search" />
+    <move element="header.panel" destination="header-wrapper" after="logo" />
+    <move element="navigation.sections" destination="header-wrapper" after="logo" /> <!--<move element="navigation.sections" destination="header.container" after="minicart" />-->
+   
+    <referenceBlock name="register-link" remove="true"/>    
+    
+ <!--   <referenceBlock name="register-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Sign Up</argument>
+            </arguments>
+    </referenceBlock>
+-->
+
+    <referenceBlock name="customer-login-heading">
+            <arguments>
+                <argument name="field-note" xsi:type="string" translate="true">Shit</argument>
+            </arguments>
+    </referenceBlock>
+    
+
+<!--HEADER EDIT END-->    
+    
+<!--FOOTER EDIT. 
+    Names of footer links blocks.
+    top.search
+
+
+    Privacy and Cookie Policy: privacy-policy-link
+    Search Terms: search-term-popular-link
+    Contact Us: contact-us-link
+    Advanced Search: catalog-search-advanced-link
+    Orders and Returns: sales-guest-form-link
+
+    To add new links to footer links, use this code:
+    <referenceBlock name="footer_links">
+        <block class="Magento\Framework\View\Element\Html\Link\Current" name="your-link-name">
+            <arguments>
+                <argument name="label" xsi:type="string">Title</argument>
+                <argument name="path" xsi:type="string">path-of-your-page</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+-->
+
+    <referenceBlock name="top.search.control" remove="true"/>
+
+
+    <remove name="breadcrumbs"/>
+    <referenceBlock name="mode" remove="true"/>
+    <referenceBlock name="search-term-popular-link" remove="true"/>
+    <referenceBlock name="catalog-search-advanced-link" remove="true"/>
+
+    <referenceBlock name="copyright" remove="true"/>
+    <referenceBlock name="newsletter" remove="true"/> <!-- Doesn't work -->
+<!-- FOOTER EDIT END -->
+
+    <catalog_product_view ranslate="label">
+        <remove name="product.reviews"/>
+    </catalog_product_view>
+
+
+
+
+</body>
+</page>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
